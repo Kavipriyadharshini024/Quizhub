@@ -1,0 +1,167 @@
+<!-- frontend/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        User Dashboard
+    </title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div>
+
+            <h2 class="logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                QuizHub
+
+            </h2>
+
+            <ul>
+
+                <li class="menu-item active"
+                    onclick="showDashboard(this)">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </li>
+
+                <li class="menu-item"
+                    onclick="showAvailableQuizzes(this)">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Attend Quiz
+
+                </li>
+
+                <li class="menu-item"
+                    onclick="showResults(this)">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Results
+
+                </li>
+
+                <li class="menu-item"
+                    onclick="showCertificates(this)">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    Certificates
+
+                </li>
+
+                <li class="menu-item"
+                    onclick="showProfile(this)">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profile
+
+                </li>
+
+                <li class="menu-item"
+                    onclick="showHelp(this)">
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+                    Help & Support
+
+                </li>
+
+                <li class="menu-item"
+                    onclick="logoutUser()">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MAIN -->
+
+    <div class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1 id="welcomeHeading">
+
+                    Welcome 👋
+
+                </h1>
+
+               
+
+            </div>
+
+
+            <div class="profile-area">
+
+                <div class="profile-circle"
+                     id="profileCircle">
+
+                    U
+
+                </div>
+
+                <span id="profileName">
+
+                    User
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- DYNAMIC CONTENT -->
+
+        <div id="contentArea">
+
+        </div>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

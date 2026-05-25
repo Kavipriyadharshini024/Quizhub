@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #4F46E5,
+        #06B6D4
+    );
+
+    overflow:hidden;
+}
+
+.hero{
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeIn 0.8s ease;
+}
+
+.hero h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-bottom:40px;
+
+    opacity:0.9;
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.buttons button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    color:#4F46E5;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.buttons button:hover{
+
+    transform:translateY(-3px);
+
+    background:#EEF2FF;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:40px;
+    }
+
+    .hero p{
+
+        font-size:18px;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+    }
+
+    .buttons button{
+
+        width:220px;
+    }
+}

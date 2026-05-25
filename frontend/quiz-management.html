@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Question Management</title>
+
+    <link rel="stylesheet"
+          href="css/question-management.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="topbar">
+
+            <h1>
+                Question Management
+            </h1>
+
+            <button onclick="goBack()">
+
+                Back
+            </button>
+
+        </div>
+
+
+        <!-- ADD QUESTION -->
+
+        <div class="question-form">
+
+            <h2>
+                Add Question
+            </h2>
+
+            <br>
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Enter Question"
+            >
+
+            <input
+                type="text"
+                id="option1"
+                placeholder="Option 1"
+            >
+
+            <input
+                type="text"
+                id="option2"
+                placeholder="Option 2"
+            >
+
+            <input
+                type="text"
+                id="option3"
+                placeholder="Option 3"
+            >
+
+            <input
+                type="text"
+                id="option4"
+                placeholder="Option 4"
+            >
+
+            <input
+                type="text"
+                id="correct_answer"
+                placeholder="Correct Answer"
+            >
+
+            <input
+                type="number"
+                id="marks"
+                placeholder="Marks"
+            >
+
+            <button onclick="addQuestion()">
+
+                Add Question
+
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION LIST -->
+
+        <div class="question-list"
+             id="questionList">
+
+        </div>
+
+    </div>
+
+    <script src="js/question-management.js"></script>
+
+</body>
+
+</html>
