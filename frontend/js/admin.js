@@ -1,6 +1,6 @@
 // frontend/js/admin.js
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "http://192.168.5.24/api";
 
 
 /* ====================================
@@ -592,7 +592,7 @@ function logoutUser(){
 }
 const attemptsTable = document.getElementById("attemptsTable");
 
-fetch("http://127.0.0.1:8000/scores/")
+fetch("http://192.168.5.24/api/scores/")
 
 .then(response => response.json())
 
