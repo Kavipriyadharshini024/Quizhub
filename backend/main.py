@@ -43,19 +43,19 @@ app.add_middleware(
 # ROUTERS
 # =====================================
 
-app.include_router(auth_router)
+app.include_router(auth_router, prefix="/api")
 
-app.include_router(quiz_router)
+app.include_router(quiz_router, prefix="/api")
 
-app.include_router(question_router)
+app.include_router(question_router, prefix="/api")
 
-app.include_router(answer_router)
+app.include_router(answer_router, prefix="/api")
 
-app.include_router(score_router)
+app.include_router(score_router, prefix="/api")
 
-app.include_router(attempt_router)
-app.include_router(user_router)
+app.include_router(attempt_router, prefix="/api")
 
+app.include_router(user_router, prefix="/api")
 # =====================================
 # ROOT
 # =====================================
