@@ -15,8 +15,53 @@ router = APIRouter(
     tags=["Scores"]
 )
 
-
 # =====================================
+# GET ALL SCORES
+# =====================================
+
+@router.get("/")
+def get_scores(db: Session = Depends(get_db)):
+
+    results = db.query(
+
+        models.Score,
+        models.User.username,
+        models.Quiz.quiz_name
+
+    ).join(
+
+        models.User,
+        models.Score.user_id == models.User.user_id
+
+    ).join(
+
+        models.Quiz,
+        models.Score.quiz_id == models.Quiz.quiz_id
+
+    ).all()
+
+
+    response = []
+
+
+    for score, username, quiz_name in results:
+
+        response.append({
+
+            "username": username,
+
+            "quiz_name": quiz_name,
+
+            "score": score.total_score,
+
+            "status": "PASS" if score.eligibility_status else "FAIL",
+
+            "attended": "Yes"
+        })
+
+
+    return response
+#====================================
 # CALCULATE RESULT
 # =====================================
 
@@ -152,19 +197,3 @@ def calculate_result(
 
         "result_status": result_status
     }
-
-   # =====================================
-# GET ALL SCORES
-# =====================================
-
-@router.get("/")
-
-def get_scores(
-    db: Session = Depends(get_db)
-):
-
-    scores = db.query(
-        models.Score
-    ).all()
-
-    return scores
